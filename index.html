@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rocket Games Hub</title>
+  <style>
+    :root {
+      --bg-1: #06111f;
+      --bg-2: #0f2338;
+      --card: #12283f;
+      --card-2: #173651;
+      --text: #e9f0f7;
+      --muted: #9fb3c8;
+      --accent: #53d7ff;
+      --accent-2: #ffa54b;
+      --border: #2d4a66;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(83, 215, 255, 0.16), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(255, 165, 75, 0.14), transparent 35%),
+        linear-gradient(145deg, var(--bg-1), var(--bg-2));
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: 0.4px;
+    }
+
+    .sub {
+      margin: 0 0 28px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: linear-gradient(160deg, var(--card), var(--card-2));
+      padding: 18px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #04111a;
+      background: var(--accent);
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn.secondary {
+      background: #263f57;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .cli {
+      margin-top: 24px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      background: rgba(8, 17, 29, 0.65);
+    }
+
+    code {
+      color: var(--accent-2);
+      font-family: Consolas, "Courier New", monospace;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Rocket Games Hub</h1>
+    <p class="sub">This repo contains two local Python/Pygame games. Use this page as a project landing/index for GitHub.</p>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Game 1: <code>game.py</code></h2>
+        <p>Original rocket game build.</p>
+        <div class="btn-row">
+          <a class="btn" href="./game.py">Open Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Game 2: <code>space.py</code></h2>
+        <p>Enhanced build with pickups, boss asteroids, combo and high score.</p>
+        <div class="btn-row">
+          <a class="btn" href="./space.py">Open Source</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="cli">
+      <p><strong>Run locally (recommended):</strong></p>
+      <p><code>pip install -r requirements.txt</code></p>
+      <p><code>python game.py</code> or <code>python space.py</code></p>
+      <p style="color:#9fb3c8;margin-top:10px;">
+        Note: GitHub Pages cannot run Pygame directly in-browser. This index is a repo launcher/documentation page.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
